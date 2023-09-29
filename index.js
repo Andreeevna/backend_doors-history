@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 
 const products = require('./products')
+const сollections = require('./сollections')
 
 const app = express()
 
@@ -14,6 +15,10 @@ app.get('/', (req, res) => {
 
 app.get('/products', (req, res) => {
 	res.send(products)
+})
+
+app.get('/collections', (req, res) => {
+	res.send(сollections)
 })
 
 app.get('/products/:id', function (req, res) {

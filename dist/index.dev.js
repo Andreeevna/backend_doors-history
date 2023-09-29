@@ -6,6 +6,8 @@ var cors = require('cors');
 
 var products = require('./products');
 
+var сollections = require('./сollections');
+
 var app = express();
 app.use(express.json());
 app.use(cors());
@@ -14,6 +16,9 @@ app.get('/', function (req, res) {
 });
 app.get('/products', function (req, res) {
   res.send(products);
+});
+app.get('/collections', function (req, res) {
+  res.send(сollections);
 });
 app.get('/products/:id', function (req, res) {
   var id = parseInt(req.params.id);
