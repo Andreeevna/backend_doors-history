@@ -4,6 +4,15 @@ var express = require('express');
 
 var cors = require('cors');
 
+var cloudinary = require('cloudinary');
+
+cloudinary.v2.config({
+  cloud_name: 'dsoxasi6c',
+  api_key: '938933394984286',
+  api_secret: '205yE__Qyf1-1Y1ofVZE3gr3nGw',
+  secure: true
+});
+
 var products = require('./products');
 
 var сollections = require('./сollections');

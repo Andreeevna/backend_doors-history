@@ -1,6 +1,15 @@
 const express = require('express')
 const cors = require('cors')
 
+const cloudinary = require('cloudinary')
+
+cloudinary.v2.config({
+	cloud_name: 'dsoxasi6c',
+	api_key: '938933394984286',
+	api_secret: '205yE__Qyf1-1Y1ofVZE3gr3nGw',
+	secure: true,
+})
+
 const products = require('./products')
 const сollections = require('./сollections')
 
